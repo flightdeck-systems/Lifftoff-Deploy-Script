@@ -4,7 +4,7 @@ NC='\033[0m'
 MALFUNCTION="👨‍🚀 Huston, We have a problem! Double check that all your parameters are correct"
 OOPS="🚀💥🔥 OOPS! Try using ${COLOR}ready${NC} or ${COLOR}ready go${NC}"
 
-################## CHANGE ME ###################
+################## CHANGE ME ########################
 USER="root" #SERVER user goes here - if not root
 REMOTE="192.168.0.0" #SERVER IP goes here
 REMOTE_PATH="/var/www/html" #PATH on REMOTE SERVER
