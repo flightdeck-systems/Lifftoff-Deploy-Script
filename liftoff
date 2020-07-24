@@ -3,7 +3,7 @@
 MALFUNCTION="Huston, We have a problem! Double check that all your parameters are correct"
 USER="root"
 REMOTE="rdm"
-REMOTE_PATH="/home/runcloud/webapps/rdm"
+REMOTE_PATH="/home/runcloud/webapps/liftoff-test"
 if [ $# -eq 0 ]
     then
         echo "$MALFUNCTION"
