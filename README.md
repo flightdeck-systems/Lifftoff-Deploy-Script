@@ -6,22 +6,27 @@ This is just a simple and basic script that uses Bash and Rsync to deploy Flight
 
 We are making a few assumptions about your local and your remote server.
 
-1. You know what SSH is and that you have key on the remote server. - this isn't a deal breaker but you will need to enter your password if no key is available.
+1. You know what SSH is and that you have a key configured for your remote server.
+   1. This isn't a deal breaker but you will need to enter your remote server password, if no key is available.
 2. You have `rsync` installed on your local.
 
 
 ### Configuration
 
-There are a two (2) file that need to be configured - `liftoff` and `misfits.txt`
+There are a two (2) files that need to be configured - `liftoff` and `misfits.txt`
 
-The `liftoff` script should be updated with your server information and path.
+The `liftoff` script should be updated with your server information and path. 
 
-The `misfits.txt` file is for excluding files and directories that should not be synced with your remote server
+- We added three (3) primary variables to make it easier to manage. - `USER`, `REMOTE`, `REMOTE_PATH`
+- If you plan to use a multi server configuration - _ie:_ Production and Stage Servers - you will need to edit two (2) additional variables. - `REMOTE2` and `REMOTE_PATH2`
 
+The `misfits.txt` file is used for excluding files and directories that should not be synced with your remote server.
 
+* We included a couple of defaults - `.git/` and `.DS_Store`
 
 ### Usage
 
-There are two (2) parameters, when executing the script.
+There are two (2) parameters, when executing the script. 
 
-A dry run to observe the payload that will deploy to your server.
+1. `./liftoff ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch checklist. 
+2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ of the payload to the remote server.

@@ -1,9 +1,12 @@
 #!/bin/bash
 
-MALFUNCTION="Huston, We have a problem! Double check that all your parameters are correct"
+MALFUNCTION="👨‍🚀 Huston, We have a problem! Double check that all your parameters are correct"
+OOPS="🚀💥🔥 OOPS! use \e[1mready or \e[1mready go "
 USER="root"
 REMOTE="rdm"
-REMOTE_PATH="/home/runcloud/webapps/liftoff-test"
+REMOTE_PATH="/home/runcloud/webapps/blastoff"
+REMOTE2="$REMOTE"
+REMOTE_PATH2="$REMOTE_PATH"
 if [ $# -eq 0 ]
     then
         echo "$MALFUNCTION"
@@ -11,13 +14,15 @@ elif [ "$1" == "ready" ]
     then
         if [[ -z "$2" ]]
             then
-                echo "Running dry-run"
+                echo "Running prelaunch ✅ check to 🪐 $REMOTE..."
                 rsync --dry-run -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
         elif [ "$2" == "go" ]
             then
-                echo "Running actual deploy"
-                rsync -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
+                echo "And we have 🚀 Liftoff to 🪐 - $REMOTE2..."
+                rsync -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE2":"$REMOTE_PATH2"
         else
             echo "$MALFUNCTION"
         fi
+    else
+      echo -e "$OOPS"
 fi
