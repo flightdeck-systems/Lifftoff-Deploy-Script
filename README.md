@@ -1,4 +1,4 @@
-## Flightdeck Liftoff
+## Flightdeck Liftoff 🚀
 
 This is just a simple and basic script that uses Bash and Rsync to deploy Flightdeck projects (or any project), that do not use NPM and the Flightdeck manifest.
 
@@ -15,7 +15,7 @@ We are making a few assumptions about your local and your remote server.
 
 There are a two (2) files that need to be configured - `liftoff` and `misfits.txt`
 
-The `liftoff` script should be updated with your server information and path. 
+The `liftoff` script should be updated with your server information and path.
 
 - We added three (3) primary variables to make it easier to manage. - `USER`, `REMOTE`, `REMOTE_PATH`
 - If you plan to use a multi server configuration - _ie:_ Production and Stage Servers - you will need to edit two (2) additional variables. - `REMOTE2` and `REMOTE_PATH2`
@@ -26,7 +26,9 @@ The `misfits.txt` file is used for excluding files and directories that should n
 
 ### Usage
 
-There are two (2) parameters, when executing the script. 
+There are two (2) parameters, when executing the script.
 
-1. `./liftoff ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch checklist. 
-2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ of the payload to the remote server.
+1. `./liftoff ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch check ✅.
+2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ the payload to the remote server. 
+   1. Launch the payload 🛰 into orbit 🪐
+
