@@ -1,0 +1,23 @@
+#!/bin/bash
+
+MALFUNCTION="Huston, We have a problem! Double check that all your parameters are correct"
+USER="root"
+REMOTE="rdm"
+REMOTE_PATH="/home/runcloud/webapps/rdm"
+if [ $# -eq 0 ]
+    then
+        echo "$MALFUNCTION"
+elif [ "$1" == "ready" ]
+    then
+        if [[ -z "$2" ]]
+            then
+                echo "Running dry-run"
+                rsync --dry-run -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
+        elif [ "$2" == "go" ]
+            then
+                echo "Running actual deploy"
+                rsync -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
+        else
+            echo "$MALFUNCTION"
+        fi
+fi
