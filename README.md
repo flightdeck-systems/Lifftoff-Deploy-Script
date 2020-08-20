@@ -1,3 +1,7 @@
+<div align="center">
+<p><img src="https://d.pr/free/i/FDUErn+" alt="Flightdeck Logo"></p>
+</div>
+
 ## Flightdeck Liftoff 🚀
 
 This is just a simple and basic script that uses Bash and Rsync to deploy Flightdeck projects (or any project), that do not use NPM and the Flightdeck manifest.
