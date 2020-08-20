@@ -29,6 +29,6 @@ The `.liftoffrc` file is used for excluding files and directories that should no
 There are two (2) parameters, when executing the script.
 
 1. `./liftoff ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch check ✅.
-2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ the payload to the remote server.
+2. `./liftoff ready go` - Will execute an **actual** push _(deploy)_ the payload to the remote server.
    1. Launch the payload 🛰 into orbit 🪐
 
