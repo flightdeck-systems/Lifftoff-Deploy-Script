@@ -13,14 +13,14 @@ We are making a few assumptions about your local and your remote server.
 
 ### Configuration
 
-There are a two (2) files that need to be configured - `liftoff` and `misfits.txt`
+There are a two (2) files that need to be configured - `liftoff` and `.liftoffrc`
 
 The `liftoff` script should be updated with your server information and path.
 
 - We added three (3) primary variables to make it easier to manage. - `USER`, `REMOTE`, `REMOTE_PATH`
 - If you plan to use a multi server configuration - _ie:_ Production and Stage Servers - you will need to edit two (2) additional variables. - `REMOTE2` and `REMOTE_PATH2`
 
-The `misfits.txt` file is used for excluding files and directories that should not be synced with your remote server.
+The `.liftoffrc` file is used for excluding files and directories that should not be synced with your remote server.
 
 * We included a couple of defaults - `.git/` and `.DS_Store`
 
@@ -29,6 +29,6 @@ The `misfits.txt` file is used for excluding files and directories that should n
 There are two (2) parameters, when executing the script.
 
 1. `./liftoff ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch check ✅.
-2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ the payload to the remote server. 
+2. `./liftoff read go` - Will execute an **actual** push _(deploy)_ the payload to the remote server.
    1. Launch the payload 🛰 into orbit 🪐
 

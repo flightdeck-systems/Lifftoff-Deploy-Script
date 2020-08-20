@@ -20,11 +20,11 @@ elif [ "$1" == "ready" ]
     if [[ -z "$2" ]]
       then
         echo "Running prelaunch ✅ check to 🪐 $REMOTE..."
-        rsync --dry-run -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
+        rsync --dry-run -az --force --delete --progress --exclude-from=.liftoffrc -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
     elif [ "$2" == "go" ]
       then
         echo "And we have 🚀 Liftoff to 🪐 - $REMOTE2..."
-        rsync -az --force --delete --progress --exclude-from=misfits.txt -e "ssh -p22" ./ "$USER"@"$REMOTE2":"$REMOTE_PATH2"
+        rsync -az --force --delete --progress --exclude-from=.liftoffrc -e "ssh -p22" ./ "$USER"@"$REMOTE2":"$REMOTE_PATH2"
     else
       echo "$MALFUNCTION"
     fi
