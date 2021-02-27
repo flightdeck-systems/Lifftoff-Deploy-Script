@@ -25,7 +25,7 @@ wget  https://raw.githubusercontent.com/flight-deck/Flightdeck-Liftoff/master/.l
 
 So the above command uses `wget` to download, just the `.liftoffrc` file into the current working directory. 
 
-From there we run `chmod +x` on the downloaded `.liftoffrc` file to make it execuate for the shell. 
+From there we run `chmod +x` on the downloaded `.liftoffrc` file to make it executable for the shell. 
 
 ### Configuration
 
