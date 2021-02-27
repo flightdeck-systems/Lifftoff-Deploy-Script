@@ -6,8 +6,8 @@ REMOTE_PATH="/var/www/html" #PATH on REMOTE SERVER
 REMOTE2="$REMOTE"
 REMOTE_PATH2="$REMOTE_PATH"
 EXCLUDES=(
-  '.git/'
-  '.DS_Store'
+  'test/'
+  'test.txt'
   '.liftoffrc'
 )
 ####################################################
