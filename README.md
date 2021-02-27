@@ -19,7 +19,7 @@ We are making a few assumptions about your local and remote server.
 To install this in your project you can run the following:
 
 ```shell
-wget  https://raw.githubusercontent.com/flight-deck/Flightdeck-Liftoff/master/.liftoffrc && && chmod +x ./.liftoffrc
+wget  https://raw.githubusercontent.com/flight-deck/Flightdeck-Liftoff/master/.liftoffrc && chmod +x ./.liftoffrc
 ```
 
 ### Configuration
