@@ -45,7 +45,7 @@ The `$EXCLUDE` variable is used for excluding files and directories that you do 
 There are two (2) parameters, to execute the script.
 
 1. `./.liftoffrc ready` - Will execute a `dry-run` to observe the payload that is ready for "liftoff" _(deploy)_ to the remote server. Think of this as a prelaunch check ✅.
-2. `./liftoff ready go` - Will execute an **actual** push _(deploy)_ of the payload to the remote server.
+2. `./liftoffrc ready go` - Will execute an **actual** push _(deploy)_ of the payload to the remote server.
    1. Launch the payload 🛰 into orbit 🪐
 
 ### Use with NPM or Yarn
