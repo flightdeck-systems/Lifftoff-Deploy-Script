@@ -1,6 +1,10 @@
 <div align="center">
 <p><img src="https://d.pr/free/i/FDUErn+" alt="Flightdeck Logo"></p>
+
+[![release](https://img.shields.io/github/release/flight-deck/flightdeck-liftoff.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-liftoff/releases/latest) 
+
 </div>
+
 
 ## Flightdeck Liftoff 🚀
 
