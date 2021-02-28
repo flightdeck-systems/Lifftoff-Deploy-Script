@@ -42,7 +42,16 @@ You will need to configure your server information and your destination path.
 
 The `$EXCLUDE` variable is used for excluding files and directories that you do not want to be included in the deployment to your remote server. - see RSYNC [docs](https://download.samba.org/pub/rsync/rsync.1) for more details, if you are curious about it.
 
-* We included a couple of examples - `.git/` and `.DS_Store` – these can be removed without issue.
+An example:
+
+```bash
+EXCLUDE=(
+   'node_modules/' 
+   'package-lock.json' 
+   'yarn.lock' 
+   '.liftoffrc'
+)
+```
 
 ### Usage
 
