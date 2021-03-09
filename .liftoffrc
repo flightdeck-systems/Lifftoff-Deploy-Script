@@ -24,7 +24,7 @@ elif [ "$1" == "ready" ]
     if [[ -z "$2" ]]
       then
         echo "Running prelaunch ✅ check to 🪐 $REMOTE..."
-        rsync --dry-run -az --force --delete ----stats --human-readable --info=progress2 $EXCLUDES -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
+        rsync --dry-run -az --force --delete --stats --human-readable --info=progress2 $EXCLUDES -e "ssh -p22" ./ "$USER"@"$REMOTE":"$REMOTE_PATH"
     elif [ "$2" == "go" ]
       then
         echo "And we have 🚀 Liftoff to 🪐 - $REMOTE2..."
