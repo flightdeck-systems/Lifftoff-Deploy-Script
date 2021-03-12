@@ -8,7 +8,10 @@ REMOTE2="$REMOTE"
 REMOTE_PATH2="$REMOTE_PATH"
 EXCLUDE=('.liftoffrc')
 ####################################################
-
+COLOR='\033[0;32m' #green
+NC='\033[0m' #no-color
+MALFUNCTION="👨‍🚀 Huston, We have a problem! Make sure all your parameters are correct"
+OOPS="🚀💥🔥 OOPS! Try using ${COLOR}ready${NC} or ${COLOR}ready go${NC}"
 
 ################## DONT EDIT BELOW  👀 ########################
 
