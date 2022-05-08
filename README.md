@@ -1,10 +1,9 @@
 <div align="center">
-<p><img src="https://d.pr/free/i/FDUErn+" alt="Flightdeck Logo"></p>
+<p><img src="https://rdm.sfo2.digitaloceanspaces.com/flightdeck/v3-flightdeck__logo--purple-haze-600x528.png" alt="Flightdeck Logo"></p>
 
-[![release](https://img.shields.io/github/release/flight-deck/flightdeck-liftoff.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-liftoff/releases/latest) 
+[![release](https://img.shields.io/github/release/flight-deck/flightdeck-liftoff.svg?style=for-the-badge&logo=github&logoColor=white&colorA=101119&colorB=6D57FF)](https://github.com/flight-deck/flightdeck-liftoff/releases/latest)
 
 </div>
-
 
 ## Flightdeck Liftoff 🚀
 
@@ -25,11 +24,12 @@ To install this in your project you can run the following:
 ```shell
 wget  https://raw.githubusercontent.com/flight-deck/Flightdeck-Liftoff/master/.liftoffrc && chmod +x .liftoffrc
 ```
-**☝️ What this does** 
 
-So the above command uses `wget` to download, just the `.liftoffrc` file into the current working directory. 
+**☝️ What this does**
 
-From there we run `chmod +x` on the downloaded `.liftoffrc` file to make it executable for the shell. 
+So the above command uses `wget` to download, just the `.liftoffrc` file into the current working directory.
+
+From there we run `chmod +x` on the downloaded `.liftoffrc` file to make it executable for the shell.
 
 ### Configuration
 
@@ -46,9 +46,9 @@ An example:
 
 ```bash
 EXCLUDE=(
-   'node_modules/' 
-   'package-lock.json' 
-   'yarn.lock' 
+   'node_modules/'
+   'package-lock.json'
+   'yarn.lock'
    '.liftoffrc'
 )
 ```
@@ -63,9 +63,9 @@ There are two (2) parameters, to execute the script.
 
 ### Use with NPM or Yarn
 
-There is no NPM package to install for Liftoff 🚀 but you can take advantage of NPM scripts inside of your `package.json` 
+There is no NPM package to install for Liftoff 🚀 but you can take advantage of NPM scripts inside of your `package.json`
 
-Add the following to your `package.json` 
+Add the following to your `package.json`
 
 ```json
 "scripts": {
@@ -74,10 +74,10 @@ Add the following to your `package.json`
 }
 ```
 
-Now you can run 
+Now you can run
 
-`npm run deploy:test`  OR `npm run deploy:live`
+`npm run deploy:test` OR `npm run deploy:live`
 
-or 
+or
 
-`yarn deploy:test`  OR `yarn deploy:live`
+`yarn deploy:test` OR `yarn deploy:live`
