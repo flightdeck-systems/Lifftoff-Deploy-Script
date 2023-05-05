@@ -8,15 +8,15 @@ REMOTE2="$REMOTE"
 REMOTE_PATH2="$REMOTE_PATH"
 EXCLUDEs='--exclude-from=.liftoffignore' #Files to exclude from deploy
 ####################################################
-COLOR='\033[0;32m' #green
+GREEN='\033[0;32m' #green
 NC='\033[0m' #no-color
 MALFUNCTION="👨‍🚀 Huston, We have a problem! Make sure all your parameters are correct"
-OOPS="🚀💥🔥 OOPS! Try using ${COLOR}ready${NC} or ${COLOR}ready go${NC}"
+OOPS="🚀💥🔥 OOPS! Try using ${GREEN}ready${NC} or ${GREEN}ready go${NC}"
 
 ################## DONT EDIT BELOW  👀 ########################
 if [ $# -eq 0 ]
   then
-    echo "$MALFUNCTION"
+    echo -e "$MALFUNCTION"
 elif [ "$1" == "ready" ]
   then
     if [[ -z "$2" ]]
@@ -28,7 +28,7 @@ elif [ "$1" == "ready" ]
         echo "And we have 🚀 Liftoff to 🪐 - $REMOTE2..."
         rsync -az --force --delete --stats --human-readable --info=progress2 $EXCLUDES -e "ssh -p22" $TO_DEPLOY "$USER"@"$REMOTE2":"$REMOTE_PATH2"
     else
-      echo "$MALFUNCTION"
+      echo -e "$MALFUNCTION"
     fi
   else
     echo -e "$OOPS"
